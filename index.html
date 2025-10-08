@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Grace Chang | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Grace (Yun Chen) Chang</h1>
         <p>Computer Science Graduate | Software Developer</p>
+        <!-- <div class="header-links">
+            <a href="resume.pdf" class="btn-primary" download>Download Resume</a>
+        </div> -->
     </header>
 
     <nav>
@@ -23,59 +26,109 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <div class="about">
+            <div class="about" id="about-professional">
+                <p>
+                    Hey there! I'm Grace, a CS grad student at Northeastern University with a passion for building intelligent systems and making data come alive through visualization.
+                </p>
+                <p>
+                    I graduated from UIUC where I discovered that the intersection of data, design, and problem-solving is where I thrive. These days, I'm diving deep into machine learning, full-stack development, and finding creative ways to make complex data accessible and engaging.
+                </p>
+                <p>
+                    When I'm not building projects or TAing database courses, you'll find me binge-watching shows (Netflix, PLEASE bring back Anne with an E!), reading, or attempting to play tennis—which turns out to be harder than debugging race conditions.
+                </p>
+                <p>
+                    I'm currently seeking full-time software engineering opportunities starting December 2025, where I can apply my skills in ML, data systems, and full-stack development. I love working on projects that combine technical depth with real-world impact.
+                </p>
+                <div class="skills">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">AWS</span>
+                </div>
+                <button id="toggle-about" class="easter-egg-btn">Want the unfiltered version? 😄</button>
+            </div>
+
+            <div class="about" id="about-fun" style="display: none;">
                 <p>
                     Hey there! I'm a CS grad student at Northeastern University, currently pretending to understand what my professors mean when they say "it's trivial" (spoiler: it's never trivial). Before joining the Husky pack, I survived four years at UIUC, where I learned that debugging code at 3 AM in the Grainger Library is a rite of passage, and that "Corn" isn't just a vegetable, it's a lifestyle.
                 </p>
                 <p>
-
                     These days, I spend my time building cool projects, wondering why my code works on my machine but nowhere else, and collecting more browser tabs than my remaining brain cells. When I'm not staring at Stack Overflow or torturing Claude/ChatGPT with desperate debugging questions, you can find me binge-watching shows (Netflix, PLEASE bring back Anne with an E!), reading, or attempting to play tennis, which, surprisingly, is harder than fixing merge conflicts.
                 </p>
                 <p>
                     I'm passionate about machine learning, data visualization, and occasionally remembering to write comments in my code.
                 </p>
                 <div class="skills">
-                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">DBMS</span>
+                    <span class="skill-tag">React</span>
                     <span class="skill-tag">Machine Learning</span>
                     <span class="skill-tag">Data Visualization</span>
-                    <span class="skill-tag">UI/UX Design</span>
-                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">AWS</span>
                 </div>
+                <button id="toggle-back" class="easter-egg-btn">Back to professional mode 👔</button>
             </div>
         </section>
 
+        
+        </section>
+
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card featured">
                     <div class="project-icon">📚</div>
                     <h3>Book Recommender</h3>
-                    <p>An intelligent book recommendation system powered by machine learning algorithms, helping users discover their next favorite read based on their preferences and reading history.</p>
-                    <a href="https://huggingface.co/spaces/ycchang4/book-recommender" class="project-link" target="_blank">View Project</a>
+                    <p>An AI-powered recommendation system using Hugging Face transformers and semantic similarity algorithms. Processes 10,000+ books with zero-shot classification and sentiment analysis.</p>
+                    <p class="tech-stack"><strong>Tech:</strong> Python, Hugging Face Transformers, Gradio, Pandas, NumPy</p>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/ycchang4/book-recommender" class="project-link" target="_blank">Live Demo</a>
+                        <a href="https://github.com/ycchang4/book-recommender" class="project-link-secondary" target="_blank">GitHub</a>
+                    </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card featured">
                     <div class="project-icon">🌍</div>
                     <h3>Climate Data Visualization</h3>
-                    <p>Interactive data visualization dashboard exploring climate trends and patterns. Built with D3.js to make complex environmental data accessible and engaging.</p>
-                    <a href="https://ycchang4.github.io/CS416-final-project/" class="project-link" target="_blank">View Project</a>
+                    <p>Interactive web app visualizing 60 years of NOAA climate data using D3.js. Features a "martini glass" narrative structure guiding users from key insights to open-ended exploration.</p>
+                    <p class="tech-stack"><strong>Tech:</strong> D3.js, JavaScript, HTML/CSS</p>
+                    <div class="project-links">
+                        <a href="https://ycchang4.github.io/CS416-final-project/" class="project-link" target="_blank">Live Demo</a>
+                        <a href="https://github.com/ycchang4/CS416-final-project" class="project-link-secondary" target="_blank">GitHub</a>
+                    </div>
                 </div>
 
+                <div class="project-card featured">
+                    <div class="project-icon">🎯</div>
+                    <h3>Sudoku</h3>
+                    <p>Interactive Sudoku puzzle game with an intelligent backtracking algorithm. Currently building features for difficulty levels and hint system.</p>
+                    <p class="tech-stack"><strong>Tech:</strong> JavaScript, HTML/CSS, Algorithm Design</p>
+                    <div class="project-links">
+                        <a href="https://ycchang4.github.io/sudoku/" class="project-link" target="_blank">Live Demo</a>
+                        <a href="https://github.com/ycchang4/sudoku" class="project-link-secondary" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 3rem; margin-bottom: 1rem;">Design Work</h3>
+            <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-icon">📖</div>
-                    <h3>BookRadar</h3>
+                    <h3>BookRadar <span class="badge">UI/UX Design</span></h3>
                     <p>A comprehensive UI/UX design for a book discovery and tracking application. Features intuitive navigation and modern design principles to enhance the reading experience.</p>
-                    <a href="https://www.figma.com/design/T8eH3haZUPz6u754ySLm4M/BookRadar?node-id=0-1&node-type=canvas&t=p4i8y8PEFpUUHIEd-0" class="project-link" target="_blank">View Design</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🎯</div>
-                    <h3>Sudoku Solver</h3>
-                    <p>Interactive Sudoku puzzle game with an intelligent solving algorithm. Features a clean interface and real-time validation for an engaging puzzle-solving experience.</p>
-                    <a href="https://ycchang4.github.io/sudoku/" class="project-link" target="_blank">View Project</a>
+                    <p class="tech-stack"><strong>Tool:</strong> Figma</p>
+                    <div class="project-links">
+                        <a href="https://www.figma.com/design/T8eH3haZUPz6u754ySLm4M/BookRadar?node-id=0-1&node-type=canvas&t=p4i8y8PEFpUUHIEd-0" class="project-link" target="_blank">View Design</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -88,8 +141,43 @@
             <a href="https://github.com/ycchang4" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/ycchang-grace/" target="_blank">LinkedIn</a>
             <a href="mailto:ycchang1117@gmail.com">Email</a>
+            <a href="resume.pdf" download>Resume</a>
         </div>
         <p style="margin-top: 2rem; opacity: 0.7;">&copy; 2025 Grace Chang. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Easter egg toggle for About section
+        const toggleBtn = document.getElementById('toggle-about');
+        const toggleBackBtn = document.getElementById('toggle-back');
+        const professionalAbout = document.getElementById('about-professional');
+        const funAbout = document.getElementById('about-fun');
+
+        toggleBtn.addEventListener('click', () => {
+            professionalAbout.style.display = 'none';
+            funAbout.style.display = 'block';
+            funAbout.style.animation = 'fadeIn 0.5s ease-in';
+        });
+
+        toggleBackBtn.addEventListener('click', () => {
+            funAbout.style.display = 'none';
+            professionalAbout.style.display = 'block';
+            professionalAbout.style.animation = 'fadeIn 0.5s ease-in';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
